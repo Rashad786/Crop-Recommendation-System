@@ -1,0 +1,108 @@
+/* Basic body styling to remove default margin/padding */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.69);
+}
+
+/* The main container that holds the background image */
+.background-container {
+    /* --- IMPORTANT: REPLACE WITH YOUR IMAGE --- */
+    background-image: url('../assets/index.png');
+    height: 100vh;
+    background-attachment:  fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Add a dark overlay for better text readability */
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+}
+
+/* The content box for text and button */
+.content {
+    /* Center the content vertically and horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+}
+
+/* Styling for the main project title */
+.content h1 {
+    font-size: 4rem; /* 4 times the base font size */
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Styling for the descriptive paragraph */
+.content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    max-width: 600px; /* Prevents the line from being too wide on large screens */
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Styling for the "Get Started" button */
+.btn {
+    background-color: #28a745; /* A nice green color */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none; /* Removes the underline from the link */
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 50px; /* Creates the pill shape */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Effect for when you hover the mouse over the button */
+.btn:hover {
+    background-color: #218838; /* A darker green */
+    transform: translateY(-2px); /* Lifts the button slightly */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+/* --- Language Switcher Styling --- */
+.lang-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 20px;
+    z-index: 10; /* Ensures it's on top of other content */
+}
+
+.lang-switcher a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.lang-switcher a:hover {
+    color: #a7d7f9; /* A light blue for hover effect */
+}
+
+/* --- Initial State for Languages --- */
+/* By default, we hide the Hindi text. JavaScript will show it when needed. */
+.lang-hi {
+    display: none;
+}
